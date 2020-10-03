@@ -19,7 +19,7 @@ const routes = [
 
     /* Req user to have been picked */
     beforeEnter: (to, from, next) => {
-      if (!store.getters.user) {
+      if (!store.state.userId) {
         next({ name: 'Login' });
       } else {
         next();
