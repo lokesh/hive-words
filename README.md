@@ -1,10 +1,10 @@
 # 🐝Team Bee
 
+A word game based off of NYT's Spelling Bee. This repo includes the game UI. The backend API lives in [github.com/lokesh/team-bee-api](https://github.com/lokesh/team-bee-api).
+
 ## 🛠 To-do
 
 **Next**
-- [x] Update CORS
-- [x] Add loading indicator
 - [ ] Admin for puzzle lists and generation.
 - [ ] Add simple token based security for puzzle crud
 - [ ] Use socket.io to relay word additions between players

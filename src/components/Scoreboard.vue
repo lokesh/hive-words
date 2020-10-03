@@ -68,8 +68,8 @@
               :user-id="user.user_id"
               :key="`user-${user.user_id}`"
               class="tag"
+              v-visible="row.users.includes(user.user_id)"
               :class="{
-                'invisible-tag': !row.users.includes(user.user_id),
                 'is-first': row.users[0] === user.user_id,
                 'is-last': row.users[row.users.length - 1] === user.user_id,
               }"
@@ -279,10 +279,6 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   margin-left: var(--gutter);
-}
-
-.tag.invisible-tag {
-  visibility: hidden;
 }
 
 .tag.is-first {
