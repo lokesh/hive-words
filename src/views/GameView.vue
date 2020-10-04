@@ -157,7 +157,7 @@ export default {
 
 .hive-sizer {
   flex: 1 1 auto;
-  max-width: 240px;
+  max-width: 280px;
 }
 
 @media (min-width: 640px) {
@@ -181,10 +181,6 @@ export default {
 
   .hive-wrapper {
     max-width: auto;
-  }
-
-  .hive-sizer {
-    max-width: 280px;
   }
 
   .col-scoreboard {

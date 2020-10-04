@@ -255,7 +255,7 @@ export default {
 
 .list {
   display: flex;
-  height: 60vh;
+  height: 58vh;
   margin-bottom: var(--gutter);
   flex-direction: column;
   flex-wrap: wrap;

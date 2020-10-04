@@ -5,12 +5,19 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 ## 🛠 To-do
 
 **Next**
-- [ ] Admin for puzzle lists and generation.
-- [ ] Add simple token based security for puzzle crud
-- [ ] Use socket.io to relay word additions between players
+- [x] Admin for puzzle lists and generation.
 - [ ] Fix, date in UI one day off.
+- [ ] Save puzzles from admin. Check when saving to make sure combo of letters has not been prev used.
+- [x] Auto-gen puzzles from admin
+- [ ] Use socket.io to relay word additions between players
+- [ ] Add simple token based security for puzzle crud
+
+- [ ] Load latest puzzle by date
 
 **UI**
+- [ ] Fix name tags rounded corners
+- [ ] Fix ios tap delay
+- [ ] Reduce tap transition time
 - [ ] Add feedback when delete, shuffle, and enter are pressed with kbd
 
 **Real-time**
@@ -24,8 +31,6 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 - [ ] User sign up form
 - [ ] API authentication
 
-**Puzzles**
-- [ ] Auto-gen puzzles
 
 **Before sharing**
 - [ ] Find a domain and final name
