@@ -6,13 +6,12 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 
 **Next**
 - [x] Admin for puzzle lists and generation.
-- [ ] Fix, date in UI one day off.
+- [x] Fix, date in UI one day off.
+- [ ] Load latest puzzle by date
 - [ ] Save puzzles from admin. Check when saving to make sure combo of letters has not been prev used.
 - [x] Auto-gen puzzles from admin
 - [ ] Use socket.io to relay word additions between players
 - [ ] Add simple token based security for puzzle crud
-
-- [ ] Load latest puzzle by date
 
 **UI**
 - [ ] Fix name tags rounded corners

@@ -184,7 +184,6 @@ export default new Vuex.Store({
       return axios.get('/puzzles')
         .then(res => {
           const puzzles = {};
-
           res.data.forEach((puzzle) => {
             puzzle.outer_letters = parseCharArray(puzzle.outer_letters);
             puzzles[puzzle.id] = puzzle;

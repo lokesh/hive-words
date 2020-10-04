@@ -55,8 +55,11 @@ export default {
     },
 
     puzzleDate() {
-      const date = new Date(this.puzzle.date);
-      return `${MONTH_NAMES[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+      // puzzle.date example: "2020-10-03T07:00:00.000Z"
+      const year = this.puzzle.date.substr(0, 4);
+      const month = parseInt(this.puzzle.date.substr(5, 2));
+      const day = parseInt(this.puzzle.date.substr(8, 2));
+      return `${MONTH_NAMES[month - 1]} ${day}, ${year}`
     },
   },
 
