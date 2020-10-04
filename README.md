@@ -5,11 +5,8 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 ## 🛠 To-do
 
 **Next**
-- [x] Admin for puzzle lists and generation.
-- [x] Fix, date in UI one day off.
-- [ ] Load latest puzzle by date
 - [ ] Save puzzles from admin. Check when saving to make sure combo of letters has not been prev used.
-- [x] Auto-gen puzzles from admin
+- [ ] Hide words and pts available msg?
 - [ ] Use socket.io to relay word additions between players
 - [ ] Add simple token based security for puzzle crud
 
@@ -59,20 +56,6 @@ The production API server hosted on Heroku has limited CORS domain origins to ht
 This project is hosted on a shared static server alongside my other content for lokeshdhakar.com. The files are sent up via ftp. 🐌
 
 ## 👷‍♀️ Architecture
-
-### API
-
-```
-GET    /users
-GET    /users/:id
-GET    /puzzles
-POST   /puzzles
-GET    /puzzles/:id
-GET    /puzzles/:id/users
-GET    /puzzles/:id/users/:userId
-POST   /puzzles/:id/users/:userId
-PUT    /puzzles/:id/users/:userId
-```
 
 ### Data init and bootstrapping
 

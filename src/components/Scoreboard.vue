@@ -37,7 +37,10 @@
           {{ displayFoundWordsCount}} words and {{ displayPoints }} pts
         </template>
       </div>
-      <div class="msg-max">
+      <div
+        v-if="false"
+        class="msg-max"
+      >
         {{ puzzle.answers.length }} words and {{ possiblePoints }} pts available
       </div>
 

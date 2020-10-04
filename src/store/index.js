@@ -181,7 +181,7 @@ export default new Vuex.Store({
      * @return {Promise}]
      */
     loadPuzzles: ({ commit }) => {
-      return axios.get('/puzzles')
+      return axios.get('/puzzles?hide_future=true')
         .then(res => {
           const puzzles = {};
           res.data.forEach((puzzle) => {
