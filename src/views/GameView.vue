@@ -106,7 +106,6 @@ export default {
         this.$store.commit('shuffleOuterLetters');
 
       } else if (e.keyCode === 27) { // Esc
-        this.$store.commit('clearUser');
         this.$router.push({ name: 'Login' });
       }
     },
