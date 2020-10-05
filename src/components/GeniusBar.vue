@@ -4,6 +4,7 @@
       :class="{'is-genius': isGenius}"
     >
         <div
+          ref="flag"
           class="flag"
           :style="flagStyles"
         >
@@ -40,17 +41,23 @@ export default {
       },
     },
 
+    data() {
+      return {
+        flagWidth: 0,
+      };
+    },
+
     computed: {
       ...mapGetters([
         'teamMode',
       ]),
 
       isGenius() {
-        return (this.percentComplete >= this.geniusPercent);
+        return (this.points >= this.geniusPoints);
       },
 
       geniusPoints() {
-        return Math.ceil(this.geniusPercent * this.possiblePoints);
+        return Math.floor(this.geniusPercent * this.possiblePoints);
       },
 
       geniusPercent() {
@@ -58,7 +65,7 @@ export default {
       },
 
       flagStyles() {
-        const halfFlagWidth = `${28 / 2}px`;
+        const halfFlagWidth = `${this.flagWidth / 2}px`;
         const percent = `${this.geniusPercent * 100}%`;
         return {
           left: `calc(${percent} - ${halfFlagWidth})`,
@@ -68,6 +75,10 @@ export default {
       percentComplete() {
         return (this.points / this.possiblePoints).toFixed(2);
       },
+    },
+
+    mounted() {
+      this.flagWidth = this.$refs.flag.offsetWidth;
     },
 }
 </script>
@@ -81,6 +92,7 @@ export default {
   position: absolute;
   top: -32px;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 1px 3px 0 3px;
   border: var(--border);
@@ -88,6 +100,7 @@ export default {
   transition: 0.5s left;
   background: white;
   font-size: 14px;
+  width: 76px;
 }
 
 .flag::after {

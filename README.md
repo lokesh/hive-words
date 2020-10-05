@@ -5,10 +5,12 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 ## 🛠 To-do
 
 **Next**
-- [ ] Save puzzles from admin. Check when saving to make sure combo of letters has not been prev used.
-- [ ] Hide words and pts available msg?
+- [x] Admin: list view
+- [x] Admin: Save auto-generate puzzles with click.
+- [x] Hide words and pts available msg?
 - [ ] Use socket.io to relay word additions between players
 - [ ] Add simple token based security for puzzle crud
+- [ ] fix: Display sorting not always alphabetical
 
 **UI**
 - [ ] Fix name tags rounded corners
@@ -27,6 +29,9 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 - [ ] User sign up form
 - [ ] API authentication
 
+**Design**
+The initial design and interaction is heavily based off of the NYT game. Pre-release, make it distinct. Inspiration: https://wordhub.com/
+- []
 
 **Before sharing**
 - [ ] Find a domain and final name
