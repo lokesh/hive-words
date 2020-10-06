@@ -4,12 +4,7 @@
     @click="openScoreboard"
   >
     <div class="msg-score">
-      <template v-if="foundWords.length === 1">
-        1 word and {{ points }} pts
-      </template>
-      <template v-else>
-        {{ foundWords.length}} words and {{ points }} pts
-      </template>
+      {{ points }} pts
     </div>
     <genius-bar
       :points="displayPoints"

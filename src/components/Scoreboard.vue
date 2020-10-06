@@ -31,10 +31,10 @@
         class="msg-score"
       >
         <template v-if="displayFoundWordsCount === 1">
-          1 word and {{ displayPoints }} pts
+          <span class="desktop-inline">1 word and </span>{{ displayPoints }} pts
         </template>
         <template v-else>
-          {{ displayFoundWordsCount}} words and {{ displayPoints }} pts
+          <span class="desktop-inline">{{ displayFoundWordsCount}} words and </span>{{ displayPoints }} pts
         </template>
       </div>
       <div
