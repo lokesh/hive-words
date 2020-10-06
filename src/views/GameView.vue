@@ -6,7 +6,10 @@
     <div class="col-gameboard">
 
       <div class="row-switcher">
-        <puzzle-switcher class="puzzle-switcher" />
+        <puzzle-switcher
+          class="puzzle-switcher"
+          @switch="switchPuzzle"
+        />
         <router-link
           to="/"
           class="user-switcher-button"
@@ -108,6 +111,10 @@ export default {
       } else if (e.keyCode === 27) { // Esc
         this.$router.push({ name: 'Login' });
       }
+    },
+
+    switchPuzzle(puzzleId) {
+      this.$store.dispatch('switchPuzzle', puzzleId)
     },
   },
 }

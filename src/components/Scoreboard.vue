@@ -6,7 +6,7 @@
         <segmented-control
           :value="teamMode"
           :options="[
-              { label: userName, value: false },
+              { label: 'Solo', value: false },
               { label: 'Team', value: true },
           ]"
           class="team-control"
