@@ -7,7 +7,7 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 **Next**
 - [x] Admin: add button to add custom constructed puzzles. d a,m,i,s,o,n also o n, r, d, s, a, g
 - [x] Add UI for finetuning 'generate random control'
-- [ ] fix: Display sorting not always alphabetical for custom words.
+- [x] fix: Display sorting not always alphabetical for custom words.
 - [ ] Use socket.io to relay word additions between players
 - [ ] Fix ios tap delay
 - [ ] Add fav icon
