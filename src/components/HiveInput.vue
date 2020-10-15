@@ -172,7 +172,7 @@ export default {
 .input {
   display: flex;
   justify-content: center;
-  margin-top: 54px;
+  margin-top: 48px;
   font-size: 36px;
   font-weight: var(--weight-bold);
   line-height: 1;

@@ -97,7 +97,7 @@ export default {
 }
 
 .nav-button-reverse {
-  padding: 6px 6px 6px 24px;
+  padding: 0 6px 0 24px;
 }
 
 .icon {

@@ -133,9 +133,15 @@ export default {
 .rail {
   position: relative;
   overflow: hidden;
-  height: 8px;
+  height: 16px;
   border-radius: var(--radius-sm);
   background: var(--color-muted);
+}
+
+@media (min-width: 640px) {
+  .rail {
+    height: 24px;
+  }
 }
 
 .rail-fill {
