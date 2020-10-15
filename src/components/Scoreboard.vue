@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <div class="scoreboard">
-
       <div class="user-bar">
         <segmented-control
           :value="teamMode"
@@ -169,7 +168,7 @@ export default {
      * @return {[Number]} row.users
      */
     list() {
-      return this.puzzle.answers.map(word => {
+      return [...this.puzzle.answers].sort().map(word => {
         let users = [];
         filter(this.puzzleProgress, (progress, userId) => {
           if (progress.found_words.includes(word)) {
