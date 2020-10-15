@@ -5,31 +5,37 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 ## 🛠 To-do
 
 **Next**
-- [ ] Admin: add button to add custom constructed puzzles. d a,m,i,s,o,n also o n, r, d, s, a, g
+- [x] Admin: add button to add custom constructed puzzles. d a,m,i,s,o,n also o n, r, d, s, a, g
+- [x] Add UI for finetuning 'generate random control'
+- [ ] fix: Display sorting not always alphabetical for custom words.
 - [ ] Use socket.io to relay word additions between players
-- [ ] Add simple token based security for puzzle crud
-- [ ] fix: Display sorting not always alphabetical
+- [ ] Fix ios tap delay
+- [ ] Add fav icon
+
+**Design**
+Isnpiration: Zach Gage games. Spelltower, Letterpress,
+- Check games downloaded on phone and open tabs.
+- Think about first, second, and third reads. What's necessary to visible in UI? Is hieararchy good?
+- Add some life! color!
+- [ ] Do a dance animation for all the tiles on a panagram. Make each one bounce up in sequence. Or try another animation. Outwards explosive bounce?
+The initial design and interaction is heavily based off of the NYT game. Pre-release, make it distinct. Inspiration: https://wordhub.com/
+- [ ] Is there an artifact people can take away or share from the game?
 
 **UI**
-- [ ] Fix name tags rounded corners
-- [ ] Fix ios tap delay
-- [ ] Reduce tap transition time
 - [ ] Add feedback when delete, shuffle, and enter are pressed with kbd
 
 **Real-time**
 - [ ] Design distinct notifications for real-time.
 
 **Gameplay**
+- [ ]Adjust points. One point per letter? Or more and more for longer? rather than 1 for four and then 5 points for 5?
 - [ ] Once answers revealed, disable submitting new words for that puzzle for that user?
 
 **User mgmt and security**
+- [ ] Add simple token based security for puzzle crud
 - [ ] Think about token for teams. Requiring a token to see user list on login.
 - [ ] User sign up form
 - [ ] API authentication
-
-**Design**
-The initial design and interaction is heavily based off of the NYT game. Pre-release, make it distinct. Inspiration: https://wordhub.com/
-- []
 
 **Before sharing**
 - [ ] Find a domain and final name
@@ -97,6 +103,7 @@ Manually enter in DB.
 - API auth
 - Polling for DB writes?
 
+Try Firebase?
 
 _Scratchpad_
 

@@ -66,14 +66,17 @@
             class="tags"
             v-if="teamMode"
           >
+            {{ usersWithProgress }}
+            {{ row.users }}
+
             <user-tag
-              v-for="user in puzzleProgress"
+              v-for="(user, index) in puzzleProgress"
               :user-id="user.user_id"
               :key="`user-${user.user_id}`"
               class="tag"
               v-visible="row.users.includes(user.user_id)"
               :class="{
-                'is-first': row.users[0] === user.user_id,
+                'is-first': index === 0 || usersWithProgress.indexOf(user.user_id),
                 'is-last': row.users[row.users.length - 1] === user.user_id,
               }"
             />
@@ -159,6 +162,10 @@ export default {
           return this.soloList;
         }
       }
+    },
+
+    usersWithProgress() {
+      return Object.keys(this.puzzleProgress).map(id => parseInt(id));
     },
 
     /**
@@ -297,6 +304,7 @@ export default {
 
 .hint {
   background: var(--color);
+  border-radius: var(--radius-sm);
 }
 
 .hint-bar {

@@ -3,6 +3,7 @@
   /* COLORS */
   /* ------ */
 
+  --color-bg: #fff;
   --color: #000;
   --color-primary: #F8CA3D;
   --color-secondary: #959595;
@@ -64,7 +65,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--color);
-
+  background: var(--color-bg);
   /* Disable iOS double tap zoom */
   touch-action: pan-y;
 }
