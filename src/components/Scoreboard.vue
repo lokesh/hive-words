@@ -66,19 +66,13 @@
             class="tags"
             v-if="teamMode"
           >
-            {{ usersWithProgress }}
-            {{ row.users }}
-
             <user-tag
-              v-for="(user, index) in puzzleProgress"
+              v-for="user in puzzleProgress"
               :user-id="user.user_id"
               :key="`user-${user.user_id}`"
               class="tag"
               v-visible="row.users.includes(user.user_id)"
-              :class="{
-                'is-first': index === 0 || usersWithProgress.indexOf(user.user_id),
-                'is-last': row.users[row.users.length - 1] === user.user_id,
-              }"
+              :class="getTagClasses(user.user_id, usersWithProgress, row.users)"
             />
           </div>
         </div>
@@ -210,6 +204,20 @@ export default {
     closeModal() {
       this.$store.commit('closeModal');
     },
+
+    getTagClasses(currentUser, allUsers, usersWithTags) {
+      const index = allUsers.indexOf(currentUser);
+      const prevUser = allUsers[index - 1];
+      const nextUser = allUsers[index + 1];
+
+      // The left and right rounding classes are inverted because the tags are
+      // displayed with flex-direction: reverse
+      return {
+        'right-rounded': (index === 0 || !usersWithTags.includes(prevUser)),
+        'left-rounded': (index === allUsers.length - 1 || !usersWithTags.includes(nextUser))
+      };
+    },
+
     toggleSetting(setting) {
       this.$store.dispatch('toggleSetting', setting);
     },
@@ -291,12 +299,12 @@ export default {
   margin-left: var(--gutter);
 }
 
-.tag.is-first {
+.tag.right-rounded {
   border-top-right-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
 }
 
-.tag.is-last {
+.tag.left-rounded {
   border-top-left-radius: var(--radius-sm);
   border-bottom-left-radius: var(--radius-sm);
 }
