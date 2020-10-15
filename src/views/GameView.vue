@@ -152,7 +152,7 @@ export default {
 }
 
 .hive-input {
-  margin-bottom: var(--gutter);
+  margin-bottom: calc(var(--gutter) * 2);
 }
 
 .hive-positioner {

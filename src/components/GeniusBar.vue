@@ -116,7 +116,6 @@ export default {
 
 .flag-points {
   position: relative;
-  top: -1px;
 }
 
 .icon {

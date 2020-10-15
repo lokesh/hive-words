@@ -172,9 +172,10 @@ export default {
 .input {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 54px;
   font-size: 36px;
   font-weight: var(--weight-bold);
+  line-height: 1;
   letter-spacing: 0.025em;
   text-align: center;
   text-transform: uppercase;
@@ -195,7 +196,7 @@ export default {
 
 .caret {
   width: 4px;
-  height: 1.2em;
+  height: 1em;
   background: var(--color-primary);
   animation: blink 1.0s cubic-bezier(.215,.61,.355,1) forwards infinite;
 }
