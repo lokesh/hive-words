@@ -4,7 +4,6 @@
     class="view"
   >
     <div class="col-gameboard">
-
       <div class="row-switcher">
         <puzzle-switcher
           class="puzzle-switcher"
@@ -163,7 +162,7 @@ export default {
 
 .hive-sizer {
   flex: 1 1 auto;
-  max-width: 280px;
+  max-width: 250px;
 }
 
 @media (min-width: 640px) {

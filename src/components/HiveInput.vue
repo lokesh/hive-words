@@ -163,6 +163,7 @@ export default {
   border-radius: var(--radius);
   pointer-events: none;
   text-align: center;
+  user-select: none;
 }
 
 .notice--visible {

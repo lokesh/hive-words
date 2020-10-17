@@ -6,7 +6,7 @@
       'outer': !center,
     }"
     viewBox="0 0 120 103.92304845413263"
-    @click="onClick"
+    @pointerdown="onClick"
   >
     <polygon
       class="shape"
@@ -88,8 +88,8 @@ export default {
   fill: var(--color-muted);
   transform-origin: center center;
   transition:
-    transform 0.1s,
-    fill 0.1s;
+    transform 0.075s,
+    fill 0.075s;
 }
 
 .shape.pressed {

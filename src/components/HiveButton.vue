@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    @click="$emit('click')"
+    @pointerdown="$emit('click')"
   >
     <slot />
   </button>
@@ -12,3 +12,9 @@ export default {
   name: 'HiveButton',
 }
 </script>
+
+<style scoped>
+button {
+  user-select: none;
+}
+</style>

@@ -36,7 +36,7 @@ export default {
     onDelete() {
       this.$store.commit('removeInputLetter');
     },
-    
+
     onEnter() {
       EventBus.$emit('submitInput');
     },

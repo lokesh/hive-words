@@ -5,11 +5,8 @@ A word game based off of NYT's Spelling Bee. This repo includes the game UI. The
 ## 🛠 To-do
 
 **Next**
-- [x] Admin: add button to add custom constructed puzzles. d a,m,i,s,o,n also o n, r, d, s, a, g
-- [x] Add UI for finetuning 'generate random control'
-- [x] fix: Display sorting not always alphabetical for custom words.
 - [ ] Use socket.io to relay word additions between players
-- [ ] Fix ios tap delay
+- [ ] Design distinct notifications for real-time.
 - [ ] Add fav icon
 
 **Design**
@@ -23,9 +20,6 @@ The initial design and interaction is heavily based off of the NYT game. Pre-rel
 
 **UI**
 - [ ] Add feedback when delete, shuffle, and enter are pressed with kbd
-
-**Real-time**
-- [ ] Design distinct notifications for real-time.
 
 **Gameplay**
 - [ ]Adjust points. One point per letter? Or more and more for longer? rather than 1 for four and then 5 points for 5?
