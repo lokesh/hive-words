@@ -86,6 +86,7 @@
           Hints
         </button>
         <button
+          v-if="false"
           class="hint-button"
           :class="{ 'toggled': revealed }"
           @click="toggleSetting('revealed')"
